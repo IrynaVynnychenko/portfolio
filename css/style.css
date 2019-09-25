@@ -125,6 +125,20 @@ body {
   bottom: 0;
 }
 
+.work .portfolio-block li::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: yellow;
+  left: -25px;
+  top: 8px;
+}
+
+.portfolio-block li {
+  position: relative;
+}
+
 .knowledge .portfolio-block li::before {
   content: "";
   position: absolute;
@@ -135,12 +149,17 @@ body {
   top: 8px;
 }
 
-.knowledge .portfolio-block li {
-  position: relative;
-}
-
 .portfolio-block__items {
   display: flex;
+}
+
+.knowledge-description h1 a {
+  color: rgba(243, 107, 130, 0.7);
+}
+
+.knowledge-description h1 a:hover {
+  color: rgba(243, 107, 130);
+  text-decoration: none;
 }
 
 @media (max-width: 1200px) {
@@ -169,7 +188,7 @@ body {
 
 @media (max-width: 512px) {
   .portfolio-photo:before {
-    left: 150px;
+    left: 125px;
   }
   .portfolio .portfolio-block:before {
     top: 100px;
@@ -180,24 +199,36 @@ body {
   .portfolio-photo:before {
     left: 210px;
   }
+
+  .portfolio .col-lg-4 {
+    height: 50vh;
+  }
 }
 
 @media (max-width: 405px) {
   .portfolio-photo:before {
     left: 160px;
   }
-  .h2, h2 {
+  .h2,
+  h2 {
     font-size: 1.5rem;
   }
   .portfolio-block li a {
     font-size: 14px;
   }
-  .h1, h1 {
-    font-size: 2.0rem;
+  .h1,
+  h1 {
+    font-size: 2rem;
   }
   .portfolio .portfolio-block:before {
-    top: 100px;
+    display: none;
   }
+  .portfolio-photo:before {
+    left: 160px;
+  }
+}
+
+@media (max-width: 350px) {
   .portfolio-photo:before {
     left: 130px;
   }
